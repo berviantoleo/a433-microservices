@@ -1,0 +1,17 @@
+version: '2.1'
+orbs:
+  docker: circleci/docker@2.1.4
+  jobs:
+    lint_and_build:
+      executor: docker/machine
+      steps:
+        - checkout
+        - docker/dockerlint:
+            dockerfile: Dockerfile
+            treat-warnings-as-errors: true
+        - run:
+            command: chmod +x build_push_image_karsajobs_ui.sh && ./build_push_image_karsajobs_ui.sh
+workflows:
+  lint-and-build-dockerfile:
+    jobs:
+      - lint_and_build
