@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karsajobs-ui # metadata name for this deployment
+  labels:
+    app: karsajobs-ui
+spec:
+  replicas: 3
+  selector:
+    matchLabels:cod
+      app: karsajobs-ui
+  template:
+    metadata:
+      labels:
+        app: karsajobs-ui # label for backend
+    spec:
+      containers:
+        - name: karsajobs-ui
+          image: ghcr.io/berviantoleo/karsajobs-ui:latest # get image from github package
+          ports:
+            - containerPort: 8000 # set container port 8000

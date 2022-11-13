@@ -1,0 +1,6 @@
+Github: https://github.com/berviantoleo/a433-microservices
+Github Package Karsajobs: https://github.com/berviantoleo/a433-microservices/pkgs/container/karsajobs
+Github Package Karsajobs UI: https://github.com/berviantoleo/a433-microservices/pkgs/container/karsajobs-ui
+Cicle CI Karsajob: https://app.circleci.com/pipelines/github/berviantoleo/a433-microservices?branch=karsajobs
+Circle CI Karsajobs UI: https://app.circleci.com/pipelines/github/berviantoleo/a433-microservices?branch=karsajobs-ui
+File Kubernetes & screenshot: di main branch
