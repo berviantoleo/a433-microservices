@@ -2,7 +2,7 @@ version: '2.1'
 orbs:
   docker: circleci/docker@2.1.4
   jobs:
-    lint_and_build:
+    build:
       executor: docker/machine
       steps:
         - checkout
@@ -14,4 +14,4 @@ orbs:
 workflows:
   lint-and-build-dockerfile:
     jobs:
-      - lint_and_build
+      - build
